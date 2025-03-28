@@ -24,3 +24,5 @@ $(".nav-icon").addEventListener("click",()=>{
   //   $("#sidebar").style.display="block";
   //   }
 });
+const year = new Date().getFullYear();
+$("#date").innerText=year;
