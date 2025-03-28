@@ -10,3 +10,17 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   alert('Thank you for your message! We will get back to you soon.');
   this.reset();
 });
+function $(sel){
+  return document.querySelector(sel);
+}
+function $A(sels){
+  return document.querySelectorAll(sels);
+}
+$(".nav-icon").addEventListener("click",()=>{
+  $("#sidebar").style.display=="block"?$("#sidebar").style.display="none":$("#sidebar").style.display="block";
+  // if($("#sidebar").style.display=="block"){
+  //   $("#sidebar").style.display="none";
+  // }else{
+  //   $("#sidebar").style.display="block";
+  //   }
+});

@@ -70,7 +70,7 @@ ul li a button:hover {
 .tag{
   color: #34a4ff;
   font-size: 50px;
-  width: 500px;
+  /* width: 500px; */
   line-height: 50px;
   text-shadow: 0 2px 2px #363636;
 }
@@ -78,7 +78,7 @@ ul li a button:hover {
 .caption{
   color: #ffffff;
   font-size: 40px;
-  width: 500px;
+  /* width: 500px; */
   line-height: 40px;
   padding-bottom: 10px;
   text-shadow: 0 2px 2px #363636;
@@ -134,7 +134,7 @@ ul li a button:hover {
 
 .description{
   font-size: 30px;
-  width: 600px;
+  /* width: 600px; */
   line-height: 30px;
   padding: 20px;
   text-align: center;
@@ -142,7 +142,7 @@ ul li a button:hover {
 
 .text{
   font-size: 70px;
-  line-height: 30px;
+  line-height: 80px;
   padding: 20px;
   color: #34a4ff;
   text-align: center;
@@ -158,10 +158,11 @@ ul li a button:hover {
 }
 
 .service-card{
-  display: grid;
-  grid-template-columns: 400px 400px 400px;
+  display: flex;
+  /* grid-template-columns: 400px 400px 400px; */
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   /* padding: ; */
 }
 
@@ -186,40 +187,26 @@ ul li a button:hover {
 
 
 button:hover {
-  background: #45a049;
+  background: white;
+  color:#34a4ff;
 }
 
 .contactForm{
-  display: grid;
   justify-content: center;
 }
-.name{
-  width: 400px;
-  height: 40px;
+.name, .email, .message{
+  width: 80%;
   border-radius: 4px;
   border: 1px solid #ccc;
   padding: 10px;
-  margin: 10px;
+  margin: 10px 0;
 }
-
-.email{
-  width: 400px;
+.name, .email{
   height: 40px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
 }
-
 .message{
-  width: 400px;
-  height: 200px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
+  height: 100px;
 }
-
 .submit{
   background: #34a4ff;
   color: white;
@@ -233,6 +220,8 @@ button:hover {
   padding-bottom: 10px;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.3);
   cursor: pointer;
+  display: block;
+  margin: auto;
 }
 
 footer {
@@ -256,4 +245,34 @@ div.content{
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
+}
+.nav-icon, #sidebar{
+  display:none;
+}
+#sidebar{
+  padding: 20px;
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  top: 50px;
+  background-color: #34a4ff;
+}
+#sidebar ul{
+  flex-direction: column;
+}
+#sidebar ul li{
+  display: block;text-align: center;
+  margin: 10px 0;
+  font-size: large;
+}
+.nav-icon, #sidebar ul li{
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  #navigation{
+    display:none;
+  }
+  .nav-icon{
+    display: block;
+  }
 }
