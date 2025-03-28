@@ -251,7 +251,7 @@ footer {
 section{
     background-size: cover;
     background-position: center;
-    background-image: url(images/tech.jpg);
+    background-image: url(../images/tech.jpg);
     background-color: rgba(255, 255, 255, 0.3);
     background-blend-mode: hard-light;
     justify-content: center;
