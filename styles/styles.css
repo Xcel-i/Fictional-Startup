@@ -1,22 +1,24 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
   font-family: Poppins, sans-serif;
 }
 
 header {
-  background: #34a4ff;
+  background: rgba(6, 34, 56, 0.75);
   color: white;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0;
-  padding: 20px 20px;
+  padding: 24px 48px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
 
 ul {
@@ -52,15 +54,15 @@ ul li a button:hover {
   color: #d6d6d6;
 }
 
-.content {
-  color: black;
-  padding-top: 50px;
-  padding-bottom: 50px;
+.hero-section {
   display: flex;
-  place-content: center;
+  background-image: url(../images/tech.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   justify-content: center;
-  text-align: center;
-  vertical-align: middle;
+  align-items: center;
+  height: 100vh;
 }
 
 /*.description-content{
@@ -234,17 +236,6 @@ footer {
 
 .foot-container{
   text-align: center;
-}
-
-div.content{
-    background-size: cover;
-    background-position: center;
-    background-image: url(../images/tech.jpg);
-    background-color: rgba(255, 255, 255, 0.3);
-    background-blend-mode: hard-light;
-    background-repeat: no-repeat;
-    justify-content: center;
-    align-items: center;
 }
 .nav-icon, #sidebar{
   display:none;
