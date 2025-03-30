@@ -16,21 +16,21 @@ function $(sel){
 function $A(sels){
   return document.querySelectorAll(sels);
 }
-$(".nav-icon").addEventListener("click",()=>{
-  $("#sidebar").style.display=="block"?$("#sidebar").style.display="none":$("#sidebar").style.display="block";
-  // if($("#sidebar").style.display=="block"){
-  //   $("#sidebar").style.display="none";
-  // }else{
-  //   $("#sidebar").style.display="block";
-  //   }
-});
+// $(".nav-icon").addEventListener("click",()=>{
+//   $("#sidebar").style.display=="block"?$("#sidebar").style.display="none":$("#sidebar").style.display="block";
+//   // if($("#sidebar").style.display=="block"){
+//   //   $("#sidebar").style.display="none";
+//   // }else{
+//   //   $("#sidebar").style.display="block";
+//   //   }
+// });
+
 const year = new Date().getFullYear();
 $("#date").innerText=year;
 
 
 //founders
-// Array to store image data
-const imageData = [
+const foundersData = [
   {
     path: "./images/evan.jpg",
     name : "Ezedike-Egwom Evan",
@@ -41,7 +41,7 @@ const imageData = [
 // Function to display images dynamically
 function displayImages() {
   const container = document.getElementById("cardContainer")
-  imageData.forEach((item)=>{
+  foundersData.forEach((item)=>{
       const card = document.createElement("div")
       card.classList.add("card")
 
@@ -57,3 +57,26 @@ function displayImages() {
 
 // Call the function to display the images after the DOM has loaded
 document.addEventListener("DOMContentLoaded", displayImages);
+
+
+let sidebar = $("#sidebar")
+let navIcon = $(".nav-icon")
+$(".nav-icon").addEventListener("click", () => {
+
+  if (sidebar.style.display === "block") {
+    sidebar.style.display = "none"
+    navIcon.src = "./images/bars-solid.svg"
+  } else {
+    sidebar.style.display = "block"
+    navIcon.src = "./images/xmark-solid.svg"
+  }
+})
+
+
+
+$A("#sidebar li").forEach(item => {
+  item.addEventListener("click", () => {
+    sidebar.style.display = "none"
+    navIcon.src = "./images/bars-solid.svg"
+  })
+})
