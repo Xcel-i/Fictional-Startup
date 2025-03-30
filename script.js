@@ -32,6 +32,11 @@ $("#date").innerText=year;
 //founders
 const foundersData = [
   {
+    path: "./images/micheal.jpeg",
+    name : "Wojuola Michael Oluwasegun",
+    title: "Team Lead Fontend Dveloper | Co-Founder",
+  },
+  {
     path: "./images/evan.jpg",
     name : "Ezedike-Egwom Evan",
     title: "Frontend Developer | Co-Founder",
