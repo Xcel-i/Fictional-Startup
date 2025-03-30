@@ -112,7 +112,7 @@ ul li a:hover {
 .card{
   background: #f9f9f9;
   border-radius: 4px;
-  width: 300px;
+  width: 400px;
   padding: 20px;
   margin: 20px;
   text-align: center;
@@ -128,7 +128,8 @@ ul li a:hover {
 }
 
 .card-img{
-  width: 150px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
 }
 
@@ -150,7 +151,7 @@ ul li a:hover {
 }
 
 .contactForm{
-  padding: 0 10%;
+  padding: 0 15%;
   width: 100%;
 }
 
