@@ -90,7 +90,7 @@ ul li a:hover {
   background-color: #eaffeb;
 }
 
-.about, .services, .contact {
+.about, .services, .contact, .founders {
   margin: 24px 25px 58px;
 }
 
@@ -106,33 +106,37 @@ ul li a:hover {
   text-align: center;
 }
 
-.services{
-  width: 100%;
-}
-
-.service-container{
+.cards{
   display: grid;
-  justify-content: center;
-}
-
-.service-card{
-  display: flex;
-  /* grid-template-columns: 400px 400px 400px; */
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  /* padding: ; */
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
 }
 
 .card{
   background: #f9f9f9;
   border-radius: 4px;
   width: 300px;
-  height: 350px;
   padding: 20px;
   margin: 20px;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card-img{
+  width: 150px;
+  border-radius: 50%;
+}
+
+.card h3{
+  font-size: 18px;
+  margin: 4px 0;
+}
+
+.card h5{
+  font-size: 16px;
+  margin: 4px 0;
+  font-weight: 400;
+  text-align: center;
 }
 
 .image{
