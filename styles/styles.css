@@ -86,17 +86,14 @@ ul li a:hover {
   cursor: pointer;
 }
 
-.learn-button:hover {
-  background-color: #eaffeb;
-}
-
-.about, .services, .contact {
+.about, .services, .contact, .founders {
   margin: 24px 25px 58px;
 }
 
 .about-description{
   font-size: 20px;
   margin-top: 16px;
+  text-align: justify;
 }
 
 .text{
@@ -106,29 +103,16 @@ ul li a:hover {
   text-align: center;
 }
 
-.services{
-  width: 100%;
-}
-
-.service-container{
+.cards{
   display: grid;
-  justify-content: center;
-}
-
-.service-card{
-  display: flex;
-  /* grid-template-columns: 400px 400px 400px; */
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  /* padding: ; */
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
 }
 
 .card{
   background: #f9f9f9;
   border-radius: 4px;
   width: 300px;
-  height: 350px;
   padding: 20px;
   margin: 20px;
   text-align: center;
@@ -143,19 +127,37 @@ ul li a:hover {
   margin-bottom: 12px;
 }
 
+.card-img{
+  width: 150px;
+  border-radius: 50%;
+}
 
-button:hover {
-  background: white;
-  color:#34a4ff;
+.card h3{
+  font-size: 18px;
+  margin: 4px 0;
+}
+
+.card h5{
+  font-size: 16px;
+  margin: 4px 0;
+  font-weight: 400;
+  text-align: center;
+}
+.contact{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .contactForm{
-  justify-content: center;
+  padding: 0 10%;
+  width: 100%;
 }
+
 .name, .email, .message{
-  width: 80%;
+  width: 100%;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #727272;
   padding: 10px;
   margin: 10px 0;
 }
@@ -163,23 +165,21 @@ button:hover {
   height: 40px;
 }
 .message{
-  height: 100px;
+  height: 150px;
+  resize: none;
 }
 .submit{
   background: #34a4ff;
   color: white;
-  font-size: 16px;
-  font: poppins;
   border: none;
-  border-radius: 4px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.3);
-  cursor: pointer;
   display: block;
   margin: auto;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 12px;
+  padding:12px 24px;
+  cursor: pointer;
+
 }
 
 footer {
@@ -193,11 +193,11 @@ footer {
 .foot-container{
   text-align: center;
 }
+
 .nav-icon, #sidebar{
   display:none;
 }
 #sidebar{
-  padding: 20px;
   position: absolute;
   z-index: 99;
   right: 0;
@@ -206,19 +206,60 @@ footer {
 }
 #sidebar ul{
   flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  width: 100vw;
+  height: calc(100vh - 50px);
 }
 #sidebar ul li{
-  display: block;text-align: center;
+  display: block;
+  text-align: center;
   margin: 10px 0;
   font-size: large;
 }
-.nav-icon, #sidebar ul li{
-  cursor: pointer;
-}
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 500px) { 
+  .hero-section .dark-overlay{
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  
+  .hero-section .dark-overlay .description-content{
+    width: 100%;
+    text-align: center;
+  }
+   
+  .about, .services, .contact, .founders {
+    padding-top: 50px;
+  }
+
+  .description-content h2{
+    font-size: 40px;
+    line-height: 40px;
+  }
+  
+  .description-content p{
+    color: #fff;
+    font-size: 24px;
+  }  
+
+  .text{
+    font-size: 40px;
+    line-height: 40px;
+  }
+  
+  .cards{
+    grid-template-columns: 1fr;
+  }
+  
+  .card-img{
+    width: 250px;
+  }
+
   #navigation{
     display:none;
   }
+  
   .nav-icon{
     display: block;
   }
