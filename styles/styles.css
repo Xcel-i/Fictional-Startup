@@ -311,13 +311,22 @@ footer{
     margin-top: 56px;
   }
 
+  .first-div p{
+    text-align: center;
+  }
   .first-div div input{
     padding:10px;
   }
   
   .links-container{
+    width: 100%;
     justify-content: space-between;
     gap: 0;
+  }
+
+  .links p{
+    font-size: 11px;
+    margin-bottom: 8px;
   }
   
   #navigation{
