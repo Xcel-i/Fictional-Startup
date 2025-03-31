@@ -34,7 +34,7 @@ const foundersData = [
   {
     path: "./images/micheal.jpeg",
     name : "Wojuola Michael Oluwasegun",
-    title: "Team Lead Fontend Dveloper | Co-Founder",
+    title: "Team Lead Frontend Developer | Co-Founder",
   },
   {
     path: "./images/evan.jpg",
