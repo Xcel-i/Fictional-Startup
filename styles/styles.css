@@ -130,6 +130,7 @@ ul li a:hover {
 .card-img{
   width: 220px;
   height: 220px;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -252,9 +253,14 @@ footer {
   .cards{
     grid-template-columns: 1fr;
   }
+
+  .card{
+    width: 80vw;
+  }
   
   .card-img{
-    width: 250px;
+    width: 200px;
+    height: 200px;
   }
 
   #navigation{
